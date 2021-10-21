@@ -6,6 +6,7 @@ import os
 from trainer import train
 from models.model_builder import build
 
+
 def str2bool(v):
     if v.lower() in ('yes', 'true', 't', 'y', '1'):
         return True
@@ -63,7 +64,7 @@ if __name__ == '__main__':
     else:
         # TODO: Add other model types
         if args.model_type == 'shwest':
-            model = build(args, device)
+            model = build(args, vocab, device)
         # TODO: Add Result
         # result = Result
 
